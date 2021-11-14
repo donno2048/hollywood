@@ -1,0 +1,11 @@
+#!/bin/bash
+while true; do
+	for d1 in "/sys /dev"; do
+		for d2 in $d1/*; do
+			if [ -x $d2 ]; then
+				tree $d2 | ccze -A
+				sleep .5
+			fi
+		done
+	done
+done

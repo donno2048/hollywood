@@ -1,0 +1,36 @@
+# hollywood
+
+Hollywood effects for your terminal.
+
+You can either download or build the package.
+
+## Download
+
+Go to the [Releases section](https://github.com/donno2048/hollywood/releases)
+
+## Build
+
+In the _hollywood_ directory run:
+
+```sh
+sudo apt update
+sudo apt install build-essential -y
+sudo chmod 755 DEBIAN/
+cd ..
+sudo dpkg-deb --build hollywood/
+```
+
+A new _hollywood.deb_ will be created in the parent directory of _hollywood_
+
+## Install
+
+```sh
+sudo apt install apg atop bmon byobu ccze cmatrix htop man tmux tree -y
+sudo dpkg -i hollywood.deb
+```
+
+## Run
+
+```sh
+hollywood
+```

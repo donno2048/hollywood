@@ -1,0 +1,7 @@
+#!/bin/bash
+while true; do
+	for f in $(ls /usr/share/man/man1/ | sort -R | sed "s/\.1\.gz.*$//" | head -n 4096); do
+		man "$f" | ccze -A
+		sleep .25
+	done
+done

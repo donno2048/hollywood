@@ -1,0 +1,4 @@
+#!/bin/bash
+while true; do
+	apg -qlt -c /dev/urandom -n 1 -m 4 | ccze -A -c default=$(printf "red\ngreen\nyellow\nblue\nmagenta\ncyan" | sort -R | head -n1)
+done

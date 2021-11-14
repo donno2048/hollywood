@@ -1,0 +1,8 @@
+Package: hollywood
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Elisha Hollander
+Depends: apg, atop, bmon, bsdmainutils, byobu, ccze, cmatrix, htop, man-db, tmux, tree
+Description: Hollywood effects for your terminal
