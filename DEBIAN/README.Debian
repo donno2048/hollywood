@@ -16,6 +16,7 @@ In the _hollywood_ directory run:
 sudo apt update
 sudo apt install build-essential -y
 sudo chmod 755 DEBIAN/
+rm -rf .git
 cd ..
 sudo dpkg-deb --build hollywood/
 ```
