@@ -33,5 +33,6 @@ sudo dpkg -i hollywood.deb
 ## Run
 
 ```sh
+chmod +x /usr/bin/hollywood /usr/lib/hollywood/*
 hollywood
 ```
