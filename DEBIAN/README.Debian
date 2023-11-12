@@ -28,11 +28,11 @@ A new _hollywood.deb_ will be created in the parent directory of _hollywood_
 ```sh
 sudo apt install apg atop bmon byobu ccze cmatrix htop man tmux tree -y
 sudo dpkg -i hollywood.deb
+chmod +x /usr/bin/hollywood /usr/lib/hollywood/*
 ```
 
 ## Run
 
 ```sh
-chmod +x /usr/bin/hollywood /usr/lib/hollywood/*
 hollywood
 ```

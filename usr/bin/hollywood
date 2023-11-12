@@ -1,16 +1,16 @@
 #!/bin/bash
 PKG="hollywood"
-WIDGET_DIR="$(dirname $0)/../lib/$PKG"
+WIDGET_DIR="$(dirname "$0")/../lib/$PKG"
 if [ -z "$TMUX" ]; then
 	byobu new-session -d -s $PKG "/bin/bash"
 	byobu send-keys -t $PKG "$0 $1"
 	exec byobu attach-session -t $PKG
 	exit 1
 fi
-for w in $(ls "$WIDGET_DIR" | sort -R); do
+for w in $(ls -1 "$WIDGET_DIR" | sort -R); do
 	[ "$dir" = "-v" ] && dir="-h" || dir="-v"
 	panes=$(tmux list-panes -t $PKG 2>/dev/null)
 	splits=$(echo "$panes" | wc -l)
-	pane=$((RANDOM % $splits))
+	pane=$((RANDOM % splits))
 	tmux split-window $dir -t ${PKG}.$pane "nice -n 19 $WIDGET_DIR/$w" >/dev/null 2>&1
 done
